@@ -22,7 +22,7 @@ const GetVideo = () => {
         {/* <h1>Get Video</h1> */}
         { error ? <h1>{error}</h1> :
         <video className='video' id='videoPlayer' width={650} controls muted="muted" autoPlay >
-            <source src={`https://infinitybin.up.railway.app/${id}`} type='video/mp4'/>
+            <source src={`https://infinitybin.up.railway.app/getvideo/${id}`} type='video/mp4'/>
         </video>}
     </div>
 
