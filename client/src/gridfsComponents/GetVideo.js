@@ -9,7 +9,7 @@ const GetVideo = () => {
     }, [])
 
     const handlevideo = async() => {
-        const res = await axios.get(`http://localhost:5000/getvideo/${id}`)
+        const res = await axios.get(`https://infinitybin.up.railway.app/${id}`)
         console.log(res.data)
         if(res.data.err){
             seterror(res.data.err)
@@ -22,7 +22,7 @@ const GetVideo = () => {
         {/* <h1>Get Video</h1> */}
         { error ? <h1>{error}</h1> :
         <video className='video' id='videoPlayer' width={650} controls muted="muted" autoPlay >
-            <source src={`http://localhost:5000/getvideo/${id}`} type='video/mp4'/>
+            <source src={`https://infinitybin.up.railway.app/${id}`} type='video/mp4'/>
         </video>}
     </div>
 

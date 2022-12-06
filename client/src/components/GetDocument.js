@@ -12,7 +12,7 @@ const GetDocument = () => {
 
     const handleDocument = async() => {
         console.log(id)
-        const res = await axios.post('https://infinitybin007.herokuapp.com/getbin',{key:id});
+        const res = await axios.post('https://infinitybin.up.railway.app/getbin',{key:id});
         console.log(res.data)
         if(res.data.status !== 'ok'){
             // alert(res.data.status)

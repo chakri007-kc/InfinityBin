@@ -11,7 +11,7 @@ const Getdoc = () => {
     const binfile = async(e) => {
         e.preventDefault();
         flag=1
-        const res = await axios.post('https://infinitybin007.herokuapp.com/getbin',{key});
+        const res = await axios.post('https://infinitybin.up.railway.app/getbin',{key});
         console.log(res)
         if(res.data.status !== 'ok'){
             alert(res.data.status)

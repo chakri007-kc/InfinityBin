@@ -15,7 +15,7 @@ const Postdoc = () => {
         des,
         key
      }
-     const res = await axios.post('https://infinitybin007.herokuapp.com/postbin',data);
+     const res = await axios.post('https://infinitybin.up.railway.app/postbin',data);
      console.log(res)
      if(res.data.status === 'Added'){
        link=`https://infinitybin-007.netlify.app/getdocument/${key}`

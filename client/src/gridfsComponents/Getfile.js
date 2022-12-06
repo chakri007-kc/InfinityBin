@@ -15,14 +15,14 @@ const Getfile = () => {
         setflag(false)
         alert('It takes sometime to load the file')
         if(filetype==='Image'){
-            const res = await axios.get(`https://infinitybin007.herokuapp.com/getimage/${key}`)
+            const res = await axios.get(`https://infinitybin.up.railway.app/getimage/${key}`)
             // console.log(res.data)
             if(res.data.success === false){
                 seterror(res.data.status)
             }
         }
         else if(filetype==='Video'){
-            const res = await axios.get(`https://infinitybin007.herokuapp.com/getvideo/${key}`)
+            const res = await axios.get(`https://infinitybin.up.railway.app/getvideo/${key}`)
             // console.log(res.data)
             if(res.data.err){
                 seterror(res.data.err)
@@ -49,8 +49,8 @@ const Getfile = () => {
             </form>
             <div>
                 {flag && !error &&
-                    ((filetype === 'Image' && <img className='image' src={`https://infinitybin007.herokuapp.com/getimage/${key}`} alt='Image'/>) ||
-                    (filetype === 'Video' && <video className='video' src={`https://infinitybin007.herokuapp.com/getvideo/${key}`} controls/>))
+                    ((filetype === 'Image' && <img className='image' src={`https://infinitybin.up.railway.app/getimage/${key}`} alt='Image'/>) ||
+                    (filetype === 'Video' && <video className='video' src={`https://infinitybin.up.railway.app/getvideo/${key}`} controls/>))
                 }
                 {error && flag && <h1>{error}</h1>}
             </div>

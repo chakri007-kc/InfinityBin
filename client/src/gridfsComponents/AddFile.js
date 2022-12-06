@@ -16,7 +16,7 @@ const AddFile = () => {
         data.append('file',file)
         data.append('caption',key)
         console.log(file.type)
-        const res = await axios.post('https://infinitybin007.herokuapp.com/postfile',data)
+        const res = await axios.post('https://infinitybin.up.railway.app/postfile',data)
         if(file.type === 'video/webm' || file.type === 'video/mp4') link=`https://infinitybin-007.netlify.app/getvideo/${key}`
         if(file.type === 'image/jpeg' || file.type === 'image/png' || file.type === 'image/gif') link=`https://infinitybin-007.netlify.app/getimage/${key}`
         setkey('')

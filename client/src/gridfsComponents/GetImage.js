@@ -10,7 +10,7 @@ const GetImage = () => {
     }, [])
 
     const handleimage = async() => {
-        const res = await axios.get(`https://infinitybin007.herokuapp.com/getimage/${id}`)
+        const res = await axios.get(`https://infinitybin.up.railway.app/getimage/${id}`)
         // console.log(res.data)
         if(res.data.success === false){
             seterror(res.data.status)
@@ -21,7 +21,7 @@ const GetImage = () => {
     <div className='kk'>
          {/* <h1>Get Image</h1> */}
         { error ? <h1>{error}</h1> :
-            <img className='image' src={`https://infinitybin007.herokuapp.com/getimage/${id}`} alt="" />
+            <img className='image' src={`https://infinitybin.up.railway.app/getimage/${id}`} alt="" />
         }
     </div>
   )
