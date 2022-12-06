@@ -35,7 +35,7 @@ const Getfile = () => {
     <div className='AppGlass'>
         <Sidebar selected="getfile"/>
         <div className='top'>
-            <h1 className='header'>Getfile</h1>
+            <h1 className='header'>Get file</h1>
             <form onSubmit={handleFile}>
                 <input className='key' type="text" placeholder='Key' onChange={(e)=>{setflag(false); seterror(''); setkey(e.target.value)}}/>
                 <br/>
